@@ -1,0 +1,615 @@
+@charset "UTF-8";
+/*main*/
+/*
+  .fs__txt__xxx
+  .fs__txt__en__xxx
+  .fw__xxx
+*/
+/*
+  .color__txt__xxx
+  .color__bg__xxx
+*/
+/*
+  .dp__xxx
+  .dp__xxx__pc
+  .dp__xxx__sp
+*/
+* {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+hr {
+  display: none;
+  line-height: 0;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  border: none;
+  width: auto;
+  max-width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+
+table, tbody, tr, th, td {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-collapse: collapse;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+small {
+  font-size: 100%;
+}
+
+@keyframes anime__light {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+/*
+@keyframes anime__xxx__ptn01 {
+}
+*/
+body {
+  width: 100%;
+  font-family: "Shippori Mincho", "游明朝", Hiragino Mincho ProN, "HGS明朝E", "メイリオ", Meiryo, serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  letter-spacing: 0.04em;
+  color: #333;
+  background-color: #fff;
+}
+body .ff__sans {
+  font-family: "游ゴシック", "メイリオ", Meiryo, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, sans-serif;
+}
+body .ff__serif {
+  font-family: "Shippori Mincho";
+}
+body .ff__sub {
+  font-family: "Cormorant";
+}
+body .fw__bold {
+  font-weight: 600;
+}
+body .fw__normal {
+  font-weight: 500;
+}
+body .fs__txt__60 {
+  font-size: 6rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+body .fs__txt__40 {
+  font-size: 4rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+body .fs__txt__26 {
+  font-size: 2.6rem;
+  line-height: 1.3846153846;
+  letter-spacing: 0.1em;
+}
+body .fs__txt__18 {
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+  letter-spacing: 0.04em;
+}
+body .fs__txt__16 {
+  font-size: 1.6rem;
+  line-height: 1.875;
+  letter-spacing: 0.04em;
+}
+body .fs__txt__14 {
+  font-size: 1.4rem;
+  line-height: 1.4285714286;
+  letter-spacing: 0.09em;
+}
+body .fs__txt__12 {
+  font-size: 1.2rem;
+  line-height: 1.3333333333;
+  letter-spacing: 0.09em;
+}
+@media (max-width: 750px) {
+  body .fs__txt__60 {
+    font-size: 4rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
+  body .fs__txt__40 {
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
+  body .fs__txt__26 {
+    font-size: 1.8rem;
+    line-height: 1.6666666667;
+    letter-spacing: 0.09em;
+  }
+  body .fs__txt__18 {
+    font-size: 1.6rem;
+    line-height: 1.875;
+    letter-spacing: 0.04em;
+  }
+  body .fs__txt__16 {
+    font-size: 1.5rem;
+    line-height: 1.8666666667;
+    letter-spacing: 0.04em;
+  }
+}
+body .fs__txt__en__80 {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Cormorant";
+}
+body .fs__txt__en__50 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Cormorant";
+}
+body .fs__txt__en__26 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Cormorant";
+}
+body .fs__txt__en__20 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Cormorant";
+}
+@media (max-width: 750px) {
+  body .fs__txt__en__80 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: "Cormorant";
+  }
+  body .fs__txt__en__50 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: "Cormorant";
+  }
+  body .fs__txt__en__26 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: "Cormorant";
+  }
+  body .fs__txt__en__20 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: "Cormorant";
+  }
+}
+body .dp__block {
+  display: block;
+}
+body .dp__block__pc {
+  display: block;
+}
+body .dp__block__sp {
+  display: none;
+}
+body .dp__inline-block {
+  display: inline-block;
+}
+body .dp__inline-block__pc {
+  display: inline-block;
+}
+body .dp__inline-block__sp {
+  display: none;
+}
+body .dp__inline {
+  display: inline;
+}
+body .dp__inline__pc {
+  display: inline;
+}
+body .dp__inline__sp {
+  display: none;
+}
+body .dp__flex {
+  display: flex;
+}
+body .dp__flex__pc {
+  display: flex;
+}
+body .dp__flex__sp {
+  display: none;
+}
+body .dp__grid {
+  display: grid;
+}
+body .dp__grid__pc {
+  display: grid;
+}
+body .dp__grid__sp {
+  display: none;
+}
+@media (max-width: 750px) {
+  body .dp__block__pc {
+    display: none;
+  }
+  body .dp__block__sp {
+    display: block;
+  }
+  body .dp__inline-block__pc {
+    display: none;
+  }
+  body .dp__inline-block__sp {
+    display: inline-block;
+  }
+  body .dp__inline__pc {
+    display: none;
+  }
+  body .dp__inline__sp {
+    display: inline;
+  }
+  body .dp__flex__pc {
+    display: none;
+  }
+  body .dp__flex__sp {
+    display: flex;
+  }
+  body .dp__grid__pc {
+    display: none;
+  }
+  body .dp__grid__sp {
+    display: grid;
+  }
+}
+body .color__txt__white {
+  color: #fff;
+}
+body .color__txt__black {
+  color: #333;
+}
+body .color__txt__gray1 {
+  color: #888;
+}
+body .color__txt__gray2 {
+  color: #ccc;
+}
+body .color__txt__gray3 {
+  color: #ddd;
+}
+body .color__txt__pri {
+  color: #A89942;
+}
+body .color__txt__sec {
+  color: #545E60;
+}
+body .color__txt__ter {
+  color: #B7D450;
+}
+body .color__txt__qua {
+  color: #204179;
+}
+body .color__txt__qui {
+  color: #A8CD37;
+}
+body .color__txt__sen {
+  color: #000028;
+}
+body .color__txt__sep {
+  color: #FFFFFF;
+}
+body .color__txt__oct {
+  color: #E2E3E4;
+}
+body .color__txt__non {
+  color: #949494;
+}
+body .color__txt__den {
+  color: #333333;
+}
+body .color__bg__white {
+  background-color: #fff;
+}
+body .color__bg__black {
+  background-color: #333;
+}
+body .color__bg__gray1 {
+  background-color: #888;
+}
+body .color__bg__gray2 {
+  background-color: #ccc;
+}
+body .color__bg__gray3 {
+  background-color: #ddd;
+}
+body .color__bg__pri {
+  background-color: #A89942;
+}
+body .color__bg__sec {
+  background-color: #545E60;
+}
+body .color__bg__ter {
+  background-color: #B7D450;
+}
+body .color__bg__qua {
+  background-color: #204179;
+}
+body .color__bg__qui {
+  background-color: #A8CD37;
+}
+body .color__bg__sen {
+  background-color: #000028;
+}
+body .color__bg__sep {
+  background-color: #FFFFFF;
+}
+body .color__bg__oct {
+  background-color: #E2E3E4;
+}
+body .color__bg__non {
+  background-color: #949494;
+}
+body .color__bg__den {
+  background-color: #333333;
+}
+body .anime__light {
+  position: relative;
+  overflow: hidden;
+}
+body .anime__light:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: anime__light 3s ease-in-out infinite;
+}
+body .anime__bottom-up {
+  opacity: 0;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  transform: translateY(100px);
+}
+body .anime__bottom-up.js--on, body .anime__bottom-up.js--ing {
+  opacity: 1;
+  transform: translateY(0px);
+}
+body .anime__opacity {
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+}
+body .anime__opacity.js--on {
+  opacity: 0.5;
+}
+body .anime__underline {
+  text-decoration: none;
+}
+body .anime__underline.js--on {
+  text-decoration: underline;
+}
+body .img__reset {
+  font-size: 0;
+  line-height: 0;
+}
+
+img {
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.sec__in__l {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.sec__in__s {
+  width: 100%;
+  max-width: 960px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+#main {
+  min-height: 100dvh;
+}
+
+section, article {
+  padding: 60px 0;
+  border-top: 1px solid #333;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 2.6rem;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 750px) {
+  .sec__in__l {
+    width: 100%;
+    max-width: 100%;
+  }
+  .sec__in__s {
+    width: 100%;
+    max-width: 100%;
+  }
+  section, article {
+    padding: 40px 4%;
+  }
+}
+/*parts*/
+/*
+  .fs__txt__xxx
+  .fs__txt__en__xxx
+  .fw__xxx
+*/
+/*
+  .color__txt__xxx
+  .color__bg__xxx
+*/
+/*
+  .dp__xxx
+  .dp__xxx__pc
+  .dp__xxx__sp
+*/
+header {
+  background: #ddd;
+}
+header .inner {
+  padding: 10px 20px;
+}
+header ul.dp__flex {
+  background: #666;
+  color: #fff;
+  gap: 0 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+header li {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*
+  .fs__txt__xxx
+  .fs__txt__en__xxx
+  .fw__xxx
+*/
+/*
+  .color__txt__xxx
+  .color__bg__xxx
+*/
+/*
+  .dp__xxx
+  .dp__xxx__pc
+  .dp__xxx__sp
+*/
+footer {
+  padding: 20px;
+  background: #ddd;
+  font-size: 1rem;
+}
+/*page*/
+/*
+  .fs__txt__xxx
+  .fs__txt__en__xxx
+  .fw__xxx
+*/
+/*
+  .color__txt__xxx
+  .color__bg__xxx
+*/
+/*
+  .dp__xxx
+  .dp__xxx__pc
+  .dp__xxx__sp
+*/
+#index .sec01 dl {
+  margin: 0 0 40px;
+}
+#index .sec01 dl:last-child {
+  margin: 0;
+}
+#index .sec01 dt {
+  margin: 0 0 20px;
+  padding: 0 0 0 1em;
+  border-left: 10px solid #333;
+}
+#index .sec01 li {
+  text-indent: -1em;
+  padding: 0 0 0 1em;
+}
+#index .sec01 li::before {
+  content: "・";
+}
+#index .sec02 .btn {
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 15px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+#index .sec02 li {
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #dfdfdf;
+  margin: 0 0 10px;
+  padding: 10px;
+}
+#index .sec02 li:last-child {
+  margin: 0;
+}
+#index .sec02 li dt {
+  font-weight: bold;
+  border-bottom: 2px dotted #333;
+  font-size: 1.8rem;
+}
+#index .sec02 li dd {
+  font-size: 1.4rem;
+}

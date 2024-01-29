@@ -1,0 +1,54 @@
+<section class="sec01">
+	<div class="sec__in__l">
+		<h2>トップページ</h2>
+		<dl>
+			<dt>基礎っぽいの</dt>
+			<dd>
+				<ul>
+					<li>[hx-get]でGETするファイルを指定。</li>
+					<li>[hx-post][hx-put][hx-patch][hx-delete]もできる。</li>
+					<li>[hx-target]でターゲットを指定。デフォルトは自身（this）。cssセレクタで指定。</li>
+					<li>[hx-trigger]でトリガータイミングを指定</li>
+					<li>[hx-swap]はDOMの入れ替え。</li>
+					<li>[hx-push-url="true"]でブラウザのログに追加される。[hx-get]に記載したURLがログに追加。<br>入れ替えたい中身とURLが異なる場合は２重に書くと上手くいった。header.htmlのソース参照。<br>[hx-boost]はbody内の書き換えになるので共通部分を除外したかったんだけど、こういう書き方が正しいのかわからない。</li>
+					<li>他にも色々あるけど、結局はjsが必要だったりする感じ。</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>挙動不審</dt>
+			<dd>
+				<ul>
+					<li>[hx-push-url]の書き方が良くないのかもしれないけど、たまに２重でヘッダーが表示される。よくわからず。</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</section>
+<section class="sec02">
+	<div class="sec__in__l">
+		<h3>client-side-templates.js + mustache.js + Fake API</h3>
+		<p>htmxのみだとAPIから記事を取得できても、データの表示だけになってしまう。<br>
+		client-side-templatesで拡張して、テンプレエンジン、今回であればmustachejsを使って配列を表示する。<br>
+		template内に生成したいDOMを記述して、[hx-target]で生成したDOMの表示先を指定する感じっぽい。<br>
+		mustachejsを触ったことがないので、なんともわからない。</p>
+		<div hx-ext="client-side-templates">
+			<p class="btn" hx-get="https://jsonplaceholder.typicode.com/posts" hx-target="#news" mustache-array-template="template-news">クリックして記事一覧を表示させる</p>
+			<template id="template-news">
+				{{#data}}
+					<li>
+						<dl>
+							<dt>{{id}}：{{title}}</dt>
+							<dd>
+								<p>{{body}}</p>
+							</dd>
+						</dl>
+					</li>
+				{{/data}}
+			</template>
+		</div>
+		<ul id="news">
+			<li>記事が表示されます。</li>
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,9 @@
+@import "../ini/function";
+@import "../setting/setting_pak";
+footer{
+	padding:20px;
+	background:#ddd;
+	font-size:1.0rem;
+	@include sp{
+	}
+}

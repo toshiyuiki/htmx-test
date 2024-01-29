@@ -1,0 +1,22 @@
+@import "../ini/function";
+@import "../setting/setting_pak";
+header{
+	background:#ddd;
+	.inner{
+		padding:10px 20px;
+	}
+	ul.dp__flex{
+		background:#666;
+		color:#fff;
+		gap:0 20px;
+		padding:5px 10px;
+		border-radius: 5px;
+		font-size:1.2rem;
+	}
+	li{
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	@include sp{
+	}
+}

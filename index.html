@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--default-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="ディスクリプション">
+<title>htmxのテスト</title>
+<link rel="canonical" href="https://xxx.xxx.xxx/">
+<link rel="shortcut icon" href="./favicon.ico">
+
+<!--ogp-->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="htmxのテスト">
+<meta property="og:description" content="htmxのテスト">
+<meta property="og:url" content="https://xxx.xxx.xxx/">
+<meta property="og:site_name" content="htmxのテスト">
+<meta property="og:image" content="./ogp.jpg">
+<meta name="thumbnail" content="./thumnail.png">
+
+<!--json_ld-->
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type":"website",
+    "name":"htmxのテスト",
+    "inLanguage":"jp",
+    "publisher": {
+        "@type": "Organization",
+        "name": "",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "./ogp.jpg"
+        }
+    },
+    "headline":"htmxのテスト",
+    "description":"htmxのテスト",
+    "url":"https://xxx.xxx.xxx/"
+}
+</script>
+
+<!--css-->
+<link rel="stylesheet" href="./css/style.css">
+
+<!--htmx-->
+<script defer src="./js/lib/htmx/htmx.js"></script>
+
+<!--htmxでテンプレートエンジンを使うための拡張用js-->
+<script defer src="./js/lib/htmx/client-side-templates.js"></script>
+
+<!--テンプレートエンジン-->
+<script defer src="./js/lib/htmx/mustache.js"></script>
+
+</head>
+<body id="index">
+
+<header hx-get="./components/header.html" hx-trigger="load" hx-swap="outerHTML"></header>
+
+<main>
+	<div id="main" hx-get="./pages/index.html" hx-trigger="load" hx-swap="innerHTML">
+		ロード中
+	</div>
+</main>
+
+<footer hx-get="./components/footer.html" hx-trigger="load" hx-swap="outerHTML"></footer>
+
+</body>
+</html>

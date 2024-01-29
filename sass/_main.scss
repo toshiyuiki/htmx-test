@@ -1,0 +1,61 @@
+@import "ini/function";
+@import "setting/setting_pak";
+@include reset;
+@include keyframes;
+body{
+  width:100%;
+  @include ff;
+  @include fw;
+  @include fs;
+  @include dp;
+  @include color;
+  @include anime;
+  .img__reset{
+    font-size:0;
+    line-height:0;
+  }
+}
+img {
+  width:100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+.sec__in__l{
+  width:100%;
+  max-width:px($max-width);
+  min-width:0;
+  margin:0 auto;
+}
+.sec__in__s{
+  width:100%;
+  max-width:px($min-width);
+  min-width:0;
+  margin:0 auto;
+}
+#main{
+  min-height:100dvh;
+}
+section,article{
+  padding:60px 0;
+  border-top:1px solid #333;
+}
+h2{
+  font-size:3.0rem;
+  margin:0 0 20px;
+}
+h3{
+  font-size:2.6rem;
+  margin:0 0 20px;
+}
+@include sp{
+  .sec__in__l{
+    width:100%;
+    max-width:100%;
+  }
+  .sec__in__s{
+    width:100%;
+    max-width:100%;
+  }
+  section,article{
+    padding:40px per(15,375);
+  }
+}

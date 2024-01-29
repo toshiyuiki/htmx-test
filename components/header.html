@@ -1,0 +1,19 @@
+<header>
+	<div class="inner">
+		<h1>htmx</h1>
+		<ul class="dp__flex">
+			<li hx-get="/pages/index.html" hx-target="#main">
+				<a hx-get="/" hx-push-url="true">トップ</a>
+			</li>
+			<li hx-get="/components/article/1.html" hx-target="#main">
+				<a hx-get="/article/1/" hx-push-url="true">記事１</a>
+			</li>
+			<li hx-get="/components/article/2.html" hx-target="#main">
+				<a hx-get="/article/2/" hx-push-url="true">記事２</a>
+			</li>
+			<li hx-get="/components/article/3.html" hx-target="#main">
+				<a hx-get="/article/3/" hx-push-url="true">記事３</a>
+			</li>
+		</ul>
+	</div>
+</header>

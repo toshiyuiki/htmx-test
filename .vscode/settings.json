@@ -1,0 +1,14 @@
+{
+	"liveSassCompile.settings.formats": [
+		{
+		  "format": "expanded", //nested、compact、compressedのどれかを選ぶ
+		  "extensionName": ".css", //拡張子を.cssとして出力
+		  "savePath": "~/../css/" //出力先
+		}
+	  ],
+	  "liveSassCompile.settings.excludeList": [ //対象外とするフォルダを指定
+        "**/modules/**",
+      ],
+	  "liveSassCompile.settings.autoprefix": [],
+	  "liveSassCompile.settings.generateMap": false
+}
